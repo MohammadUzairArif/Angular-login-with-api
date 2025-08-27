@@ -1,0 +1,45 @@
+ <main class="container-fluid login-container">
+    <div class="row g-0 min-vh-100">
+      <!-- Left side image -->
+      <div class="col-md-6 d-none d-md-flex align-items-center justify-content-center login-image">
+        <img src="https://cdn-icons-png.flaticon.com/512/5087/5087579.png" 
+             alt="Login Illustration" 
+             class="img-fluid login-illustration">
+      </div>
+
+      <!-- Right side form -->
+      <div class="col-md-6 d-flex align-items-center justify-content-center bg-dark">
+        <div class="login-card p-4 w-100" style="max-width:400px;">
+          <div class="text-center mb-4">
+            <i class="bi bi-shield-lock-fill icon-lock"></i>
+            <h2 class="text-white mt-2">Welcome Back</h2>
+            <p class="text-muted">Sign in to continue</p>
+          </div>
+
+          <form [formGroup]="loginForm">
+            <div class="mb-3">
+              <label for="email" class="form-label">Email address</label>
+              <input type="email" formControlName="EmailId" class="form-control" id="email" placeholder="you@example.com" required>
+            </div>
+
+            <div class="mb-3">
+              <label for="password" class="form-label">Password</label>
+              <input type="password" formControlName="Password" class="form-control" id="password" placeholder="••••••••" required>
+            </div>
+
+            <!-- <div class="d-flex justify-content-between align-items-center mb-4">
+              <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="remember">
+                <label class="form-check-label text-white-50" for="remember">Remember me</label>
+              </div>
+              <span class="small text-muted">Need an account? <a href="#" class="link-light">Sign up</a></span>
+            </div> -->
+
+            <button type="button" (click)="onLogin()" class="btn btn-accent w-100 py-2">
+              <i class="bi bi-box-arrow-in-right me-2"></i> Sign In
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </main>

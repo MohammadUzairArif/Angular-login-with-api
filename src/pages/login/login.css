@@ -1,0 +1,72 @@
+/* Background */
+.login-container {
+  background: linear-gradient(135deg, #0f1020, #1a1f3a, #0a0f2d);
+  background-size: 200% 200%;
+  animation: gradientShift 10s ease-in-out infinite alternate;
+}
+
+@keyframes gradientShift {
+  0% { background-position: left top; }
+  100% { background-position: right bottom; }
+}
+
+/* Image floating animation */
+.login-illustration {
+  max-height: 400px;
+  animation: floaty 4s ease-in-out infinite;
+}
+
+@keyframes floaty {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+}
+
+/* Login card */
+.login-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  border-radius: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+  animation: fadeInUp 0.8s ease-out;
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Inputs */
+.form-control {
+  background-color: #0f1630;
+  border: 1px solid #22305a;
+  color: #e6e9f5;
+}
+.form-control:focus {
+  border-color: #6ea8fe;
+  box-shadow: 0 0 0 .25rem #6ea8fe44;
+  background-color: #0f1638;
+  color: #fff;
+}
+.form-label { color: #cfd7ff; }
+
+/* Button */
+.btn-accent {
+  background-color: #6ea8fe;
+  border: none;
+  color: #0b1226;
+  border-radius: 0.8rem;
+  font-weight: 600;
+  box-shadow: 0 10px 20px rgba(110, 168, 254, 0.3);
+  transition: transform .2s, box-shadow .2s;
+}
+.btn-accent:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 28px rgba(110, 168, 254, 0.5);
+}
+
+/* Lock Icon */
+.icon-lock {
+  font-size: 3rem;
+  color: #6ea8fe;
+}
