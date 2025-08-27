@@ -26,6 +26,7 @@ router = inject(Router)
         debugger
         if(response.result){
           alert("Login Successful")
+          localStorage.setItem("token",response.data.token)
           this.router.navigateByUrl('/dashboard')
         }else{
           alert(response.message)
